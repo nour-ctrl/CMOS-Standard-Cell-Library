@@ -1,0 +1,7 @@
+vdd vdd 0 dc 1.8
+vin in 0 DC pulse 0 1.8 0.1n 500p 0.00001f 5n 10n
+.tran 0 100n
+cload F 0 36fF
+.measure tpdr v(in) val=0.9 fall=1 TARG v(F) val=0.9 rise=1
+.measure tpdf v(in) val=0.9 rise=1 TARG v(F) val=0.9 fall=1
+.include C:\Users\Nour\Desktop\scmos18.txt

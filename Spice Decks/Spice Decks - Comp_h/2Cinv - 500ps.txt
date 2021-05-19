@@ -1,0 +1,7 @@
+vdd vdd 0 DC 1.8
+vin w 0 DC pulse 0 1.8 0.1n 500p 0.00001f 5n 10n
+.tran 0 100n
+cload h 0 18fF
+.measure tpdr v(w) val=0.9 fall =1 TARG v(h) val=0.9 rise=1 
+.measure tpdf v(w) val=0.9 rise=1 TARG v(h) val=0.9 fall=1
+.include C:\Users\Nada\Desktop\dd2project1\scmos18.txt
